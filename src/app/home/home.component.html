@@ -1,0 +1,93 @@
+
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<div class="container-fluid ">
+
+	<div class="row" height="25px" style="width: 100%; padding: 5px">
+
+		<table width="100%">
+			<tbody width="100%">
+				<tr width="100%">
+					<td valign="baseline" width="50%"><h1>Dashboard</h1></td>
+					<td valign="baseline" width="50%">
+				<tr align="right">
+					<td style="font-size: 18px; color: #333;"><span
+						class="glyphicon glyphicon-time"></span></td>
+					<td style="font-size: 15px; color: #333; padding: 10px"><p>time</p></td>
+				</tr>
+				</td>
+				</tr>
+
+			</tbody>
+
+		</table>
+
+
+	</div>
+
+
+	<div class="row">
+		<div class="col-lg-3 col-md-6 col-sm-6  ">
+
+			<div class="alert alert-info  w3-hover-shadow "
+				style="height: 65px; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box;">
+				<strong>Devices 1</strong> <img height="100%" style="float: right"
+					src="../assets/img/svg/device-icon-g.svg   ">
+			</div>
+
+		</div>
+		<div class="col-lg-3 col-md-6 col-sm-6  ">
+			<div class="alert alert-danger  w3-hover-shadow "
+				style="height: 65px; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box;">
+				<strong>Critical Alerts 1</strong> <img height="100%"
+					style="float: right" src="../assets/img/svg/alert-icon-p.svg  ">
+			</div>
+		</div>
+		<div class="col-lg-3 col-md-6 col-sm-6  ">
+			<div class="alert alert-danger  w3-hover-shadow "
+				style="height: 65px; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box;">
+				<strong>Major Alerts 1</strong> <img height="100%"
+					style="float: right" src="../assets/img/svg/major-icon-o.svg">
+			</div>
+		</div>
+		<div class="col-lg-3 col-md-6 col-sm-6  ">
+			<div class="alert alert-warning  w3-hover-shadow "
+				style="height: 65px; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box;">
+				<strong>Minor Alerts 1</strong> <img height="100%"
+					style="float: right"
+					src="../assets/img/svg/notification-icon-y.svg">
+			</div>
+		</div>
+	</div>
+
+	<ul class="nav nav-tabs">
+		<li [ngClass]="{'active':isOverviewActive}"><a 
+			routerLink="/home/summary-dashboard/overview">TABLE OVERVIEW</a></li>
+		<li [ngClass]="{'active':isGraphActive}"><a 
+			routerLink="/home/summary-dashboard/graph">COMPARISON GRAPH</a></li>
+		<li [ngClass]="{'active':isAlertsActive}"><a 
+			routerLink="/home/summary-dashboard/alerts">ACTIVE ALERTS</a></li>
+		<li [ngClass]="{'active':isNotificationsActive}"><a 
+			routerLink="/home/summary-dashboard/notification">LATEST
+				NOTIFICATIONS</a></li>
+	</ul>
+
+
+
+</div>
+<div id="content">
+<router-outlet ></router-outlet>
+
+</div>
+ 
+
+ 
+

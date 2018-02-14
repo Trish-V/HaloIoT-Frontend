@@ -1,0 +1,88 @@
+
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<div class="w3-bar    " style="background: #333; color: white">
+	<a routerLink="/" class="w3-bar-item w3-button w3-mobile"><img
+		src="assets/img/haloheaderlogo.png" width="55px" /> </a> <a
+		class="w3-bar-item w3-button w3-mobile" id="sidebarCollapse2">Menu</a>
+	<a class="w3-bar-item w3-button w3-mobile w3-right"
+		tyle="color: #ddb65e"><i class="fas fa-sign-out-alt"></i> Logout</a>
+</div>
+<div class="wrapper">
+
+	<nav id="sidebar">
+		<a id="sidebarCollapse">
+			<div class="sidebar-header">
+				<h3>{{title}}</h3>
+				<strong>{{subtitle}}</strong>
+			</div>
+		</a>
+		<ul class="list-unstyled components">
+			<li [ngClass]="{'active':isDashboardActive}"><a
+				routerLink="home" class="active"><img class="sideimg"
+					src="assets/img/svg/home-icon-w.svg"> Dashboard</a></li>
+			<li [ngClass]="{'active':isDevicesActive}"><a
+				routerLink="/devices"><img class="sideimg"
+					src="assets/img/svg/device-icon-w.svg">
+					&thinsp;Devices&thinsp;&thinsp;</a></li>
+
+			<li [ngClass]="{'active':isCatalogueActive}"><a
+				routerLink="/catalogue/device-types"><img class="sideimg"
+					src="assets/img/svg/catalogue-icon-w.svg"> Catalogue</a></li>
+
+			<li [ngClass]="{'active':isManageUsersActive}"><a
+				routerLink="/manage-users"><img class="sideimg"
+					src="assets/img/svg/manage-icon-w.svg">&thinsp;&thinsp;Manage&thinsp;Users</a></li>
+
+
+		</ul>
+
+	</nav>
+
+
+	<div id="headcontent">
+
+		<!-- 
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+
+				<div class="navbar-header" style="float: left; left: 0;">
+
+					<a routerLink="/" class="logo" height="35px" width="40px"><img
+						src="assets/img/haloheaderlogo.png" /> </a>
+
+				</div>
+
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#" style="color: #ddb65e"><i
+							class="fas fa-sign-out-alt"></i> Logout</a></li>
+				</ul>
+				<div class="collapse navbar-collapse"
+					id="bs-example-navbar-collapse-1"></div>
+			</div>
+		</nav>
+
+		 -->
+
+		<div id="content ">
+
+			<router-outlet></router-outlet>
+
+		</div>
+
+	</div>
+
+</div>
+
+
+
+
+
+
+
+
